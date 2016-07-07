@@ -23,6 +23,8 @@ module Cloner::Internal
     ENV['CLONE_FROM'] || 'production'
   end
 
+  def db_dump_options
+  end
   def db_restore_options
   end
 
