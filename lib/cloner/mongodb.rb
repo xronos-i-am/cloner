@@ -70,7 +70,7 @@ module Cloner::MongoDB
 
   def mongodb_dump_restore
     puts "restoring DB"
-    restore = "mongorestore --drop -d #{e mongodb_to} #{mongodb_local_auth} #{e mongodb_path}"
+    restore = "mongorestore --drop -d #{e mongodb_to} #{mongodb_local_auth} #{db_restore_options} #{e mongodb_path}"
     puts restore if verbose?
     pipe = IO.popen(restore)
     while (line = pipe.gets)

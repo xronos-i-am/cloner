@@ -23,6 +23,9 @@ module Cloner::Internal
     ENV['CLONE_FROM'] || 'production'
   end
 
+  def db_restore_options
+  end
+
   def clone_db
     if defined?(Mongoid)
       clone_mongodb
